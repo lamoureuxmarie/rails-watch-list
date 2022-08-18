@@ -1,11 +1,11 @@
 require 'json'
 require 'open-uri'
 
-puts "cleaning database..."
+puts 'cleaning database...'
 Movie.destroy_all
 
 
-api_url = URI.open("http://tmdb.lewagon.com/movie/top_rated").read
+api_url = URI.open('http://tmdb.lewagon.com/movie/top_rated').read
 response = JSON.parse(api_url)
 results = response['results']
 poster = 'https://image.tmdb.org/t/p/w500'

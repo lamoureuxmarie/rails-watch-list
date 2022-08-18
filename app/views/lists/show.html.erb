@@ -1,0 +1,13 @@
+<h1><%= @list.name %></h1>
+
+<ul>
+  <% @list.bookmarks.each do |bookmark| %>
+    <li><%= bookmark.movie.title %></li>
+    <%= link_to bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: 'Are you sure you want to remove this movie?' } do %>
+      <h5>x</h5>
+    <% end %>
+  <% end %>
+</ul>
+
+<%= link_to 'Add a movie', new_list_bookmark_path(@list), class: "btn btn-primary" %>
+<%= link_to 'Back to homepage', lists_path, class: "btn btn-secondary" %>
