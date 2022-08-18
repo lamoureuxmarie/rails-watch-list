@@ -1,5 +1,6 @@
 <%= simple_form_for(@list) do |f| %>
   <%= f.input :name %>
+  <%= f.input :photo, placeholder: 'Add an image URL' %>
   <div class='d-flex justify-content-between pt-4'>
     <p class='m-0'><%= link_to "Back to lists", lists_path, class: "btn btn-secondary" %></p>
     <p class='m-0'><%= f.submit "Create list", class: "btn btn-primary" %></p>

@@ -10,3 +10,13 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "components/cards";
+
+body {
+  background-color: #181818;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
